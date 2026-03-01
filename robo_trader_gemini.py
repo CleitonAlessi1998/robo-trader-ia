@@ -28,9 +28,9 @@ from datetime import datetime
 #  ⚙️  CONFIGURAÇÕES
 # ════════════════════════════════════════════════════════════════
 
-CALLMEBOT_PHONE   = os.environ.get("CALLMEBOT_PHONE",   "SEU_NUMERO_AQUI")
-CALLMEBOT_APIKEY  = os.environ.get("CALLMEBOT_APIKEY",  "SUA_CHAVE_AQUI")
-GEMINI_APIKEY     = os.environ.get("GEMINI_API_KEY", "SUA_CHAVE_GEMINI_AQUI")
+CALLMEBOT_PHONE   = os.environ.get("CALLMEBOT_PHONE",   "5542999055775")
+CALLMEBOT_APIKEY  = os.environ.get("CALLMEBOT_APIKEY",  "1109879")
+GEMINI_APIKEY     = os.environ.get("GEMINI_API_KEY", "AIzaSyAATpIJc9nHXHYwC_XoxNKijuhkPp0p3UM")
 
 ATIVOS = {
     "Ações BR": [
