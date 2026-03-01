@@ -12,7 +12,7 @@ import os
 from datetime import datetime, timezone, timedelta
 
 # ================================================================
-# CONFIGURACOES — valores vem dos Secrets do GitHub
+# CONFIGURACOES - valores vem dos Secrets do GitHub
 # ================================================================
 CALLMEBOT_PHONE  = os.environ.get("CALLMEBOT_PHONE",  "SEU_NUMERO")
 CALLMEBOT_APIKEY = os.environ.get("CALLMEBOT_APIKEY", "SUA_CHAVE")
@@ -131,11 +131,11 @@ def gerar_relatorio(data):
         r = requests.post(gemini_url, json=payload, timeout=90)
         if r.status_code == 200:
             texto = r.json()["candidates"][0]["content"]["parts"][0]["text"]
-            print("  OK — relatorio gerado com noticias em tempo real")
+            print("  OK - relatorio gerado com noticias em tempo real")
             return texto
-        print(f"  Google Search retornou {r.status_code} — usando fallback")
+        print(f"  Google Search retornou {r.status_code} - usando fallback")
     except Exception as e:
-        print(f"  Erro Google Search: {e} — usando fallback")
+        print(f"  Erro Google Search: {e} - usando fallback")
 
     # Tentativa 2: sem grounding
     print("  Gerando sem busca em tempo real...")
@@ -151,7 +151,7 @@ def gerar_relatorio(data):
             "\n\n_Nota: relatorio gerado sem acesso em tempo real. "
             "Dados podem nao refletir os eventos das ultimas 24h._"
         )
-        print("  OK — relatorio gerado sem tempo real")
+        print("  OK - relatorio gerado sem tempo real")
         return texto + nota
     except Exception as e:
         return f"ERRO: {e}"
@@ -189,7 +189,7 @@ def rodar():
     hora  = agora.strftime("%H:%M")
 
     print("\n" + "="*65)
-    print(f"  RELATORIO EXECUTIVO — {data} {hora} (Brasilia)")
+    print(f"  RELATORIO EXECUTIVO - {data} {hora} (Brasilia)")
     print("="*65 + "\n")
 
     print("Gerando relatorio com Gemini...")
