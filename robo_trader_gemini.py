@@ -1,4 +1,4 @@
-name: Robô Trader PRO — Gemini (Gratuito)
+name: Robô Trader PRO - Gemini (Gratuito)
 
 on:
   schedule:
